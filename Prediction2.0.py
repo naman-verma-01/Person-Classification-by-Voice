@@ -328,11 +328,11 @@ for audios, labels in test_ds.take(1):
             )
         )
         Audio(audios[index, :, :].squeeze(), rate=SAMPLING_RATE)
-if class_names[y_pred[index]] == "Naman":
-    engine.say("welcome sir")
+if class_names[y_pred[index]] == "Person1":
+    engine.say("Audio classified as Person1")
     engine.runAndWait()
 
 
 else:
-    engine.say("you are not authorized to access this program")
+    engine.say("Person not recognized.")
     engine.runAndWait()
